@@ -87,7 +87,7 @@ export default async function ProjectsPage({
             <div
               id={(idx + 1) as unknown as string}
               className={`${idx > 0 && "pt-24"}
-              ${idx === 0 && "pb-12"}
+              ${idx === 0 && "pb-24"}
                flex flex-col pt-12 drop-shadow-lg shadow-black bg-opacity-50 rounded-md min-h-[30vh]`}
             >
               <div className="bg-slate-600 p-6 text-3xl sm:text-5xl italic font-light drop-shadow-lg shadow-black flex flex-col gap-6">

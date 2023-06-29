@@ -15,7 +15,6 @@ export default async function ClientsPage({
           <div className="  lg:w-full lg:mx-6 xl:mx-12 flex items-center justify-center text-center">
             <div className="lg:bg-white text-white lg:text-black flex flex-col items-center justify-center py-12 z-[1500] rounded-lg px-6">
               <Image
-                unoptimized
                 src="https://firebasestorage.googleapis.com/v0/b/decocanva-408fb.appspot.com/o/image-187166?alt=media&token=71cdb059-605d-44bf-a2b3-4fdba5d7e9c9"
                 width={512}
                 height={512}

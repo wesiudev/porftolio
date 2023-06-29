@@ -47,7 +47,6 @@ export default async function technologies({
               <h1 className="text-2xl">{tech.name}</h1>
               <div className="flex items-center justify-center py-6 bg-gradient-to-r from-gray-300 via-white to-gray-300 h-[20vh]">
                 <Image
-                  unoptimized
                   src={tech.image}
                   alt="Technology thumbnail"
                   width={256}
