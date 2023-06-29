@@ -3,11 +3,11 @@
     "clients":"Dla klientów"
   },
   "MetaData": {
-    "IndexTitle": "Portfolio Wesiudev | Programista stron internetowych i aplikacji.",
-    "IndexDescription": "Tworzenie stron internetowych. Dowiedz się więcej o moich projektach, technologiach, które używam oraz o mnie.",
-    "TechnologiesTitle": "Technologie Wesiudev | JavaScript, React, Next (...) ",
+    "IndexTitle": "Portfolio | wesiudev | Tworzenie stron internetowych",
+    "IndexDescription": "Tworzenie stron i aplikacji internetowych. Dowiedz się więcej o moich projektach, technologiach, które używam oraz o mnie.",
+    "TechnologiesTitle": "Technologie | wesiudev | JavaScript, React, Next (...) ",
     "TechnologiesDescription": "Języki programowania, które umożliwiają mi tworzenie stron internetowych. Dowiedz się więcej o technologiach, które używam do tworzenia stron internetowych.",
-    "ProjectsTitle": "Projekty Wesiudev | Tworzenie stron internetowych",
+    "ProjectsTitle": "Projekty | wesiudev | Tworzenie stron internetowych",
     "ProjectsDescription": "Zobacz strony internetowe, które stworzyłem. Programowanie stron internetowych spersonalizowane do potrzeb każdego klienta."
   },
   "Auth":{

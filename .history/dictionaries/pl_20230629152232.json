@@ -3,12 +3,8 @@
     "clients":"Dla klientów"
   },
   "MetaData": {
-    "IndexTitle": "Portfolio Wesiudev | Programista stron internetowych i aplikacji.",
-    "IndexDescription": "Tworzenie stron internetowych. Dowiedz się więcej o moich projektach, technologiach, które używam oraz o mnie.",
-    "TechnologiesTitle": "Technologie Wesiudev | JavaScript, React, Next (...) ",
-    "TechnologiesDescription": "Języki programowania, które umożliwiają mi tworzenie stron internetowych. Dowiedz się więcej o technologiach, które używam do tworzenia stron internetowych.",
-    "ProjectsTitle": "Projekty Wesiudev | Tworzenie stron internetowych",
-    "ProjectsDescription": "Zobacz strony internetowe, które stworzyłem. Programowanie stron internetowych spersonalizowane do potrzeb każdego klienta."
+    "IndexTitle": "wesiudev - Front-end Developer",
+    "IndexDescription": "Strona główna wesiu.dev - Tworzenie stron i aplikacji internetowych."
   },
   "Auth":{
     "h1":"Zaloguj się do swojego konta strony, aby zarządzać treścią.",

@@ -3,15 +3,8 @@
     "clients":"For clients"
   },
   "MetaData": {
-
-    "IndexTitle": "Wesiudev | Front-end Developer | Website Development",
-    "IndexDescription": "Homepage wesiu.dev - Website Development - Front-end Developer Portfolio.",
-
-    "TechnologiesTitle": "Wesiudev | Technologies | JavaScript, React, Next (...)",
-    "TechnologiesDescription": "Technologies wesiu.dev - Programming languages that I use in Website Development.",
-
-    "ProjectsTitle": "Wesiudev | Projects | Website Development",
-    "ProjectsDescription": "Projects wesiu.dev - Check out websites I have developed - Website development."
+    "IndexTitle": "wesiu.dev - Front-end Developer",
+    "IndexDescription": "Homepage wesiu.dev - Website and web application development"
   },
   "Auth":{
     "h1":"Sign in to your account and manage your content.",

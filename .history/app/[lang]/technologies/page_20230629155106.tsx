@@ -2,7 +2,6 @@ import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 import Image from "next/image";
 import Link from "next/link";
-import Head from "../head";
 
 export default async function technologies({
   params,
@@ -24,8 +23,8 @@ export default async function technologies({
   return (
     <>
       <Head
-        title={dictionary.MetaData["TechnologiesTitle"]}
-        description={dictionary.MetaData["TechnologiesDescription"]}
+        title={dictionary.MetaData["ProjectsTitle"]}
+        description={dictionary.MetaData["ProjectsDescription"]}
       />
       <div className="w-full bg-gray-400 min-h-screen flex flex-col pb-24">
         <div className="pt-48 w-full ">

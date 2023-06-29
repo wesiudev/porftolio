@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ProjectTitle } from "./components/ProjectTitle";
 import { ImageInteraction } from "./components/ImageInteraction";
 import { ScrollButton } from "./components/ScrollButton";
-import Head from "../head";
 
 export default async function ProjectsPage({
   params: { lang },
@@ -17,10 +16,6 @@ export default async function ProjectsPage({
 
   return (
     <>
-      <Head
-        title={dictionary.MetaData["ProjectsTitle"]}
-        description={dictionary.MetaData["ProjectsDescription"]}
-      />
       <div className=" w-full min-h-screen bg-gradient-to-l from-gray-600 via-gray-400 to-gray-600 background-animate-projects delay-500 flex items-center relative overflow-x-hidden">
         {/* <div className="fixed bottom-12  px-3 left-[50%] -translate-x-[50%] flex flex-row justify-between w-full z-50">
         <Link

@@ -36,10 +36,7 @@ export default async function IndexPage({
     //   <Counter dictionary={dictionary.counter} />
     // </div>
     <>
-      <Head
-        title={dictionary.MetaData["IndexTitle"]}
-        description={dictionary.MetaData["IndexDescription"]}
-      />
+      <Head />
       <main className="h-full flex flex-col justify-between relative w-full px-3 lg:px-0 lg:w-3/4 mx-auto min-h-screen">
         <div className="fixed left-0 top-0 bg-gradient-to-br from-gray-500 via-gray-300 to-gray-500 background-animate delay-1000 h-full w-full"></div>
         <div className="min-h-[50vh] w-max mx-auto flex flex-col justify-end select-none">

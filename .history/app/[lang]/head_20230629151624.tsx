@@ -6,8 +6,11 @@ type HeadProps = {
 export default function Head({ title, description }: HeadProps) {
   return (
     <>
-      <title>{`${title}`}</title>
-      <meta name="description" content={description} />
+      <title>{`${title}wesiu.dev - Front-end Developer | Homepage`}</title>
+      <meta
+        name={description}
+        content="Front-end developer portfolio website. See my projects."
+      />
       <link rel="icon" href="/favicon.ico" />
     </>
   );

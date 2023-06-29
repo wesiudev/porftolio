@@ -20,7 +20,7 @@ export default async function Root({
   return (
     <html lang={params.lang}>
       <body className={`${cocosharp.variable} font-sans`}>
-        <Header dictionary={dictionary} />
+        <Header position="absolute" dictionary={dictionary} />
         <Providers>{children}</Providers>
       </body>
     </html>
