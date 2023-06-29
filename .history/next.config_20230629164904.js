@@ -11,7 +11,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "firebasestorage.googleapis.com" },
 
-      { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "**upload.wikimedia.org" },
     ],
   },
 };
