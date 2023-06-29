@@ -109,23 +109,27 @@ export default async function ProjectsPage({
               </div>
               <div className="flex flex-col w-full h-full mt-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {thumbnail.images.map((image, idx) => (
+                  {thumbnail.images.length > 1 && (
                     <>
-                      <ImageInteraction
-                        imageId={image.id}
-                        images={thumbnail.images}
-                      >
-                        <Image
-                          key={idx}
-                          src={image.src}
-                          alt="Project Image"
-                          width={480}
-                          height={270}
-                          className="w-full rounded-md cursor-zoom-in"
-                        />
-                      </ImageInteraction>
+                      {thumbnail.images.map((image, idx) => (
+                        <>
+                          <ImageInteraction
+                            imageId={image.id}
+                            images={thumbnail.images}
+                          >
+                            <Image
+                              key={idx}
+                              src={image.src}
+                              alt="Project Image"
+                              width={480}
+                              height={270}
+                              className="w-full rounded-md cursor-zoom-in"
+                            />
+                          </ImageInteraction>
+                        </>
+                      ))}
                     </>
-                  ))}
+                  )}
                 </div>
               </div>
               <div className="flex flex-col gap-6 mt-12">
