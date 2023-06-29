@@ -116,7 +116,6 @@ export default async function ProjectsPage({
                         images={thumbnail.images}
                       >
                         <Image
-                          unoptimized
                           key={idx}
                           src={image.src}
                           alt="Project Image"
