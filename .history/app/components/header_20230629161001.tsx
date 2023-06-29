@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { FaGithub, FaUserCircle } from "react-icons/fa";
 import { LinkRoute } from "./RouteLink";
-
-export default function Header({
-  dictionary,
-  lang,
-}: {
-  dictionary: any;
-  lang: any;
-}) {
+export default function Header({ dictionary }: { dictionary: any }) {
   return (
     <div
       className={`w-full px-3 lg:px-0 lg:w-3/4 flex justify-between py-6 lg:py-12 text-white absolute top-0 left-[50%] -translate-x-[50%] z-[999]`}
@@ -23,7 +16,6 @@ export default function Header({
       </Link>
       <div className="">
         <LinkRoute
-          lang={lang}
           to="/clients"
           className="flex items-center p-3 bg-gradient-to-br from-green-500 hover:from-green-400 to-gray-500 hover:to-gray-400 rounded-md w-max"
         >
