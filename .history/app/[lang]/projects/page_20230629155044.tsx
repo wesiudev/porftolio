@@ -118,7 +118,7 @@ export default async function ProjectsPage({
                         <Image
                           key={idx}
                           src={image.src}
-                          alt="Project Image"
+                          alt={image.alt}
                           width={480}
                           height={270}
                           className="w-full rounded-md cursor-zoom-in"
