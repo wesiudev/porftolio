@@ -120,9 +120,8 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
         setIsEmailValid(true);
       }, 5000);
     }
-    if (isEmailValid && isPNumberValid) {
-      addVisitorRequest(data);
-    }
+
+    // addVisitorRequest(data);
   }
 
   return (
@@ -577,10 +576,8 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                           Email
                         </label>
                         <input
-                          value={userData.email}
-                          onChange={(e) =>
-                            setUserData({ ...userData, email: e.target.value })
-                          }
+                        value={userData.email}
+                        onChange={(e) => setUserData({...userData, email: e.target.value})
                           placeholder="example@gmail.com"
                           id="contact"
                           type="text"

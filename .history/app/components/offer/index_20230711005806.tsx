@@ -21,8 +21,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
       offset: 100,
     });
   }, []);
-
-  //where is the user in the process
   const [hoveredText, setHoveredText] = useState<any>({
     itemName: "",
     itemDescription: "",
@@ -30,13 +28,9 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
   });
   const [isSummary, setIsSummary] = useState<boolean>(false);
   const [chosenProduct, setChosenProduct] = useState<any>("");
-
-  //handle the user's choices
   const [expectedTime, setExpectedTime] = useState<any>("");
   const [extraServicesPrice, setExtraServicesPrice] = useState<number>(0);
   const [checkAvailability, setCheckAvailability] = useState<boolean>(false);
-
-  //handle the user data
   const [isPNumberValid, setIsPNumberValid] = useState<boolean>(true);
   const [isEmailValid, setIsEmailValid] = useState<boolean>(true);
   const [userData, setUserData] = useState<any>({
@@ -44,8 +38,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
     email: "",
     expectedPrice: 0,
   });
-
-  //handle the width of the screen
   const [width, setWidth] = useState<number>(0);
   useEffect(() => {
     if (window !== undefined) {
@@ -54,8 +46,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
     }
   }, [width]);
   let ScrollLink = Scroll.Link;
-
-  //handle the expected time and price of the product
   function getExpectedTime(template: any) {
     setChosenProduct(template);
     const services = template.services.map((service: any) => service.id);
@@ -74,7 +64,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
     }, 0);
     setExpectedTime(totalSum);
   }
-  //handle user extra services
   function addFunctionalityToTemplate(functionality: any) {
     const alreadyAdded = chosenProduct.services.find(
       (service: any) => service.id === functionality.id
@@ -91,15 +80,9 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
     );
     setChosenProduct({ ...chosenProduct, services: updatedServices });
   }
-
-  //validate user input
   const validatePhoneNumber = (phoneNumber: string) => {
     const phoneNumberRegex = /^(\+48)?\d{9}$/; // Regular expression to match the phone number formats
     return phoneNumberRegex.test(phoneNumber);
-  };
-  const validateEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression to match email format
-    return emailRegex.test(email);
   };
 
   function sendRequest() {
@@ -113,16 +96,17 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
       setTimeout(() => {
         setIsPNumberValid(true);
       }, 5000);
+      return;
     }
-    if (validateEmail(userData.email) === false) {
+    if (!userData.email.includes("@") || !userData.email.includes(".")) {
       setIsEmailValid(false);
       setTimeout(() => {
         setIsEmailValid(true);
       }, 5000);
+      return;
     }
-    if (isEmailValid && isPNumberValid) {
-      addVisitorRequest(data);
-    }
+
+    // addVisitorRequest(data);
   }
 
   return (
@@ -568,7 +552,9 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                     <div className="flex flex-col lg:grid lg:grid-cols-3 gap-x-3 w-full lg:mt-12">
                       <div className="flex flex-col mt-3 lg:mt-0 relative">
                         <div className="absolute -bottom-6 left-0">
-                          {!isEmailValid && <p>Proszę wpisać poprawny email</p>}
+                          {!isEmailValid && (
+                            <p>Przykładowy number telefonu: 123 456 789</p>
+                          )}
                         </div>
                         <label
                           htmlFor="contact"
@@ -577,10 +563,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                           Email
                         </label>
                         <input
-                          value={userData.email}
-                          onChange={(e) =>
-                            setUserData({ ...userData, email: e.target.value })
-                          }
                           placeholder="example@gmail.com"
                           id="contact"
                           type="text"
@@ -593,7 +575,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                       <div className="flex flex-col relative">
                         <div className="absolute -bottom-6 left-0">
                           {!isPNumberValid && (
-                            <p>Przykładowy numer telefonu: 123456789</p>
+                            <p>Przykładowy number telefonu: 123 456 789</p>
                           )}
                         </div>
                         <label

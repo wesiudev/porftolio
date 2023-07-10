@@ -39,10 +39,10 @@ const storage = getStorage(app);
 
 //MAIN FUNCTIONS
 //visitors
-const visitorsRef = collection(db, "wesiudev", "visitors", "visitorsRequests");
+const db = collection(db, "wesiudev");
 
 async function addVisitorRequest(req) {
-  await addDoc(visitorsRef, req);
+  await addDoc(db, req);
 }
 
 export {
@@ -50,6 +50,11 @@ export {
   provider,
   storage,
   auth,
-  //visitors
-  addVisitorRequest,
+  //images
+  getUserImages,
+  addImage,
+  getAllImages,
+  //users
+  getUser,
+  updateUserHistory,
 };

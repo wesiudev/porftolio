@@ -39,7 +39,7 @@ const storage = getStorage(app);
 
 //MAIN FUNCTIONS
 //visitors
-const visitorsRef = collection(db, "wesiudev", "visitors", "visitorsRequests");
+const visitorsRef = collection(db, "wesiudev", "visitors");
 
 async function addVisitorRequest(req) {
   await addDoc(visitorsRef, req);

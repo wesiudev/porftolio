@@ -37,12 +37,12 @@ const db = getFirestore(app);
 
 const storage = getStorage(app);
 
-//MAIN FUNCTIONS
-//visitors
-const visitorsRef = collection(db, "wesiudev", "visitors", "visitorsRequests");
+//images
 
-async function addVisitorRequest(req) {
-  await addDoc(visitorsRef, req);
+const imagesRef = collection(db, "images");
+
+async function addImage(req) {
+  await addDoc(imagesRef, req);
 }
 
 export {
@@ -50,6 +50,11 @@ export {
   provider,
   storage,
   auth,
-  //visitors
-  addVisitorRequest,
+  //images
+  getUserImages,
+  addImage,
+  getAllImages,
+  //users
+  getUser,
+  updateUserHistory,
 };

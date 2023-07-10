@@ -97,7 +97,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
     const phoneNumberRegex = /^(\+48)?\d{9}$/; // Regular expression to match the phone number formats
     return phoneNumberRegex.test(phoneNumber);
   };
-  const validateEmail = (email: string) => {
+  const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression to match email format
     return emailRegex.test(email);
   };
@@ -113,16 +113,17 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
       setTimeout(() => {
         setIsPNumberValid(true);
       }, 5000);
+      return;
     }
-    if (validateEmail(userData.email) === false) {
+    if (!userData.email.includes("@") || !userData.email.includes(".")) {
       setIsEmailValid(false);
       setTimeout(() => {
         setIsEmailValid(true);
       }, 5000);
+      return;
     }
-    if (isEmailValid && isPNumberValid) {
-      addVisitorRequest(data);
-    }
+
+    // addVisitorRequest(data);
   }
 
   return (
@@ -577,10 +578,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                           Email
                         </label>
                         <input
-                          value={userData.email}
-                          onChange={(e) =>
-                            setUserData({ ...userData, email: e.target.value })
-                          }
                           placeholder="example@gmail.com"
                           id="contact"
                           type="text"

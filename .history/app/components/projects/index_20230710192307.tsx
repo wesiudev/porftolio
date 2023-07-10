@@ -88,7 +88,7 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
                 <span className="text-green-500 font-bold"> {"</>"}</span>
               </div>
               <div className="flex flex-col mt-16">
-                <div className="flex flex-row flex-wrap justify-center sm:grid grid-cols-3  gap-3 px-6 lg:px-0">
+                <div className="flex flex-row flex-wrap justify-between sm:grid grid-cols-3  gap-3 px-6 lg:px-0">
                   {thumbnail.stack.map((stackItem: any, idx: number) => (
                     <div
                       className="py-1 px-3 sm:p-2 text-xl lg:p-3 text-center bg-slate-800 mt-3  sm:gap-3"

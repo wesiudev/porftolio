@@ -108,21 +108,22 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
       pNumber: userData.pNumber,
       expectedPrice: (expectedTime * 55 + extraServicesPrice).toFixed(2),
     };
-    if (validatePhoneNumber(userData.pNumber) === false) {
+    if (validatePhoneNumber(data.pNumber) === false) {
       setIsPNumberValid(false);
       setTimeout(() => {
         setIsPNumberValid(true);
       }, 5000);
+      return;
     }
-    if (validateEmail(userData.email) === false) {
+    if (validateEmail(data.email) === false) {
       setIsEmailValid(false);
       setTimeout(() => {
         setIsEmailValid(true);
       }, 5000);
+      return;
     }
-    if (isEmailValid && isPNumberValid) {
-      addVisitorRequest(data);
-    }
+
+    // addVisitorRequest(data);
   }
 
   return (
@@ -577,10 +578,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                           Email
                         </label>
                         <input
-                          value={userData.email}
-                          onChange={(e) =>
-                            setUserData({ ...userData, email: e.target.value })
-                          }
                           placeholder="example@gmail.com"
                           id="contact"
                           type="text"

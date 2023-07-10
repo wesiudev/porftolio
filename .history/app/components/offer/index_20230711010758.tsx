@@ -120,9 +120,8 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
         setIsEmailValid(true);
       }, 5000);
     }
-    if (isEmailValid && isPNumberValid) {
-      addVisitorRequest(data);
-    }
+
+    // addVisitorRequest(data);
   }
 
   return (

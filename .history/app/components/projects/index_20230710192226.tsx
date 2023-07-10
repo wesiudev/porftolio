@@ -82,13 +82,13 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
               <div className="bg-slate-600 p-6 text-3xl sm:text-5xl italic font-light drop-shadow-lg shadow-black flex flex-col sm:gap-6">
                 <ProjectTitle title={thumbnail.title} link={thumbnail.link} />
               </div>
-              <div className="w-max mx-auto lg:mx-0 text-5xl lg:text-7xl font-extralight mt-24  flex flex-row items-center">
-                <span className="text-green-500 font-bold"> {"<>"}</span>
+              <div className="w-max mx-auto lg:mx-0 text-4xl sm:text-5xl lg:text-7xl font-extralight mt-24  flex flex-row items-center">
+                {"<>"}
                 {dictionary.ProjectsPage.stack}
-                <span className="text-green-500 font-bold"> {"</>"}</span>
+                {"</>"}
               </div>
               <div className="flex flex-col mt-16">
-                <div className="flex flex-row flex-wrap justify-center sm:grid grid-cols-3  gap-3 px-6 lg:px-0">
+                <div className="flex flex-row flex-wrap justify-between sm:grid grid-cols-3  gap-3 px-6 lg:px-0">
                   {thumbnail.stack.map((stackItem: any, idx: number) => (
                     <div
                       className="py-1 px-3 sm:p-2 text-xl lg:p-3 text-center bg-slate-800 mt-3  sm:gap-3"
