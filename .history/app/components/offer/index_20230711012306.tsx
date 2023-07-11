@@ -573,7 +573,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                         <div className="absolute -bottom-6 left-0">
                           {!isEmailValid && <p>Proszę wpisać poprawny email</p>}
                         </div>
-                        <div className="absolute -bottom-6 left-0 text-green-500 mt-2">
+                        <div className="absolute -bottom-6 left-0 text-green-500">
                           {isRequestSent && (
                             <p>Otrzymasz odpowiedź w przeciągu 24h.</p>
                           )}

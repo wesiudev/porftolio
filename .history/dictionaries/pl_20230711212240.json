@@ -303,67 +303,13 @@
             "name": "Platforma internetowa",
             "description": "Platforma internetowa to strona internetowa, która umożliwia użytkownikom dostęp do różnych usług lub funkcji. Służą do świadczenia usług typu strony ogłoszeniowe, sklepy internetowe, portale społecznościowe, platformy edukacyjne, platformy do zarządzania projektami, platformy do zarządzania zasobami ludzkimi itp.",
             "services": [
-                {
-                    "id": 0,
-                    "name": "Inicjalizacja projektu"
-                },
-                {
-                    "id": 1,
-                    "name": "Strona główna"
-                },
-                {
-                    "id": 2,
-                    "name": "Formularz kontaktowy"
-                },
-                {
-                    "id": 5,
-                    "name": "Nawigacja strony"
-                },
-                {
-                    "id": 6,
-                    "name": "System logowania"
-                },
-                {
-                    "id": 7,
-                    "name": "Opis produktów lub usług, cennik"
-                },
-                {
-                    "id": 8,
-                    "name": "System faktur"
-                },
-                {
-                    "id": 9,
-                    "name": "Utworzenie komponentów"
-                },
-                {
-                    "id": 10,
-                    "name": "Optymalizacja SEO"
-                },
-                {
-                    "id": 11,
-                    "name": "Testowanie i debugowanie"
-                },
-                
-                {
-                    "id": 12,
-                    "name": "Dodawanie interakcji"
-                },
-                {
-                    "id": 13,
-                    "name": "Podsumowanie designu"
-                },
-                {
-                    "id": 14,
-                    "name": "Wdrażanie aplikacji"
-                },
-                {
-                    "id": 15,
-                    "name": "Ustawienie domeny"
-                }
+            {"id": 0, "name": "Login System"},
+            {"id": 6, "name": "Contact Form"},
+            {"id": 7, "name": "Current Data and Content"}
             ],
             "img": "https://firebasestorage.googleapis.com/v0/b/decocanva-408fb.appspot.com/o/image-333832?alt=media&token=24f0e956-2b50-4cfc-a443-50548876c2fa",
             "img2": "https://firebasestorage.googleapis.com/v0/b/decocanva-408fb.appspot.com/o/image-883886?alt=media&token=4b1ee311-0447-42e5-a3ff-d7bbdf0351b0"
-            }
+            },}
         ],
         "toolServices": [
             {
