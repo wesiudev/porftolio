@@ -8,12 +8,7 @@ import { getDictionary } from "../../get-dictionary";
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
-export const metadata = {
-  icons: {
-    icon: "/favicon.png",
-  },
-  viewport: "width=device-width, initial-scale=1",
-};
+
 export default async function Root({
   children,
   params,

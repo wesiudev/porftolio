@@ -10,7 +10,6 @@ import {
   FaWindowClose,
 } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
-import Image from "next/image";
 import * as Scroll from "react-scroll";
 import { sumNumbersFromString } from "./sumNumbers";
 import { addVisitorRequest } from "../../../firebase";
