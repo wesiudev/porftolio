@@ -25,7 +25,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
       <div
         className={`${
           isTopVisible ? "lg:rounded-t-0" : "lg:rounded-t-[500px]"
-        } duration-500 w-full bg-gradient-to-l from-gray-600 via-gray-400 to-gray-600 min-h-screen flex flex-col relative overflow-hidden pb-12 sm:pb-12 lg:pb-24`}
+        } duration-500 w-full bg-gradient-to-l from-gray-600 via-gray-400 to-gray-600 min-h-screen flex flex-col relative overflow-hidden sm:pb-12 lg:pb-24`}
       >
         <div
           className="absolute top-48 lg:top-60 left-0 w-4 h-full"
@@ -59,7 +59,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
 
             <h2
               data-aos="fade-left"
-              data-aos-delay="200"
+              data-aos-delay="300"
               className="w-4/5 my-12 lg:mt-0 lg:mb-0  lg:w-full lg:pr-12 text-center lg:text-left mx-auto lg:mx-0 text-xl sm:text-2xl lg:pt-12 drop-shadow-lg shadow-black text-white"
             >
               {dictionary["TechnologiesPage"].h2}
@@ -73,12 +73,12 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
             />
           </div>
         </div>
-        <div className="w-4/5 lg:w-3/4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-100 relative overflow-hidden ">
+        <div className="w-full lg:w-3/4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-100 relative overflow-hidden ">
           <div className="absolute -top-24 " id="1"></div>
           {dictionary["Technologies"].map((tech: any, idx: number) => (
             <div
               data-aos="fade-up"
-              data-aos-delay={200}
+              data-aos-delay={idx * 100}
               key={idx}
               className="relative bg-white flex flex-col duration-75 group sm:rounded-md shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-3 cursor-pointer"
             >

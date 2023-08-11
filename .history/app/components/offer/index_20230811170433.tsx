@@ -144,33 +144,126 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
           </h2>
         </div>
       </div>
+      {hoveredText.itemName !== "" && (
+        <div className="fixed top-0 sm:top-28 left-0 sm:h-max w-full z-[5000] sm:px-6 lg:px-0">
+          <div
+            onMouseOver={() =>
+              width > 1024 &&
+              setHoveredText({
+                itemName: hoveredText.itemName,
+                itemDescription: hoveredText.itemDescription,
+                img: hoveredText.img,
+              })
+            }
+            className="flex flex-col w-full h-screen sm:h-max lg:w-3/4 mx-auto drop-shadow-lg shadow-black bg-white rounded-t-lg sm:rounded-lg  sm:text-lg lg:text-xl overflow-scroll sm:overflow-hidden"
+          >
+            <div className="relative sm:hidden">
+              <FaArrowAltCircleLeft
+                onClick={() =>
+                  setHoveredText({ itemName: "", itemDescription: "", img: "" })
+                }
+                className="h-16 w-16 text-white absolute left-6 top-6 drop-shadow-lg shadow-black"
+              />
+              <img src={hoveredText.img} alt="Mobile website description" />
+            </div>
+            <div className="flex sm:flex-row h-full relative">
+              <img
+                className="h-64 xl:h-52 hidden md:block rounded-l-lg"
+                src={hoveredText.img}
+                alt="Product"
+              />
 
+              <div className="flex flex-col h-full mt-3">
+                <span className="text-3xl font-bold pt-6 sm:py-0 lg:text-2xl p-3 select-none text-blue-400">
+                  {hoveredText.itemName}
+                </span>
+                <ScrollLink
+                  to="tool"
+                  smooth={true}
+                  duration={500}
+                  delay={200}
+                  onClick={(e: any) => {
+                    setHoveredText({
+                      itemName: "",
+                      itemDescription: "",
+                      img: "",
+                    }),
+                      getExpectedTime(
+                        dictionary.CustomerHook.templates.find(
+                          (template: any) =>
+                            template.name === hoveredText.itemName
+                        )
+                      ),
+                      e.stopPropagation();
+                  }}
+                  className={`hover:bg-green-400 cursor-pointer w-max px-3 py-2 font-bold absolute rounded-lg -translate-y-24 lg:translate-y-12 group-hover:lg:-translate-y-16 duration-200 left-[50%] -translate-x-[50%] bg-green-500 text-white sm:hidden`}
+                >
+                  {dictionary.CustomerHook.toolButton}
+                </ScrollLink>
+                <span className="italic  select-none lg:text-md px-3">
+                  {hoveredText.itemDescription}
+                </span>
+                <button
+                  onClick={() =>
+                    setHoveredText({
+                      itemName: "",
+                      itemDescription: "",
+                      img: "",
+                    })
+                  }
+                  className="bg-gray-300 rounded-md w-max px-3 py-1 ml-3 mb-3 mt-2 md:mb-0"
+                >
+                  {dictionary.Navigation.btnClose}
+                </button>
+              </div>
+            </div>
+            <div className="w-full h-full grid grid-cols-2 gap-3 sm:hidden px-3 mt-3">
+              {dictionary.CustomerHook.templates.map(
+                (template: any, idx: number) => (
+                  <div
+                    onClick={() => {
+                      setHoveredText({
+                        itemName: template.name,
+                        itemDescription: template.description,
+                        img: template.img2,
+                      });
+                    }}
+                    key={idx}
+                    className="bg-white h-max aspect-square rounded-md overflow-hidden relative group"
+                  >
+                    <img
+                      className="filter brightness-[0.62]"
+                      src={template.img}
+                      alt="Website type image"
+                    />
+                    <span className="text-sm group-hover:lg:scale-110 duration-150 sm:text-lg text-white absolute z-50 left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] lg:text-2xl w-max cursor-default select-none ">
+                      {template.name}
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="w-[90vw] h-max flex flex-col mt-6 lg:px-0 lg:w-3/4 mx-auto rounded-lg z-50 ">
         <div className="w-full grid grid-cols-2 lg:grid-cols-3 h-max gap-6">
           {dictionary.CustomerHook.templates.map(
             (template: any, idx: number) => (
-              <ScrollLink
-                to="tool"
-                smooth={true}
-                duration={500}
-                delay={200}
+              <div
                 data-aos="fade-up"
                 data-aos-delay={idx * 100}
-                onClick={(e: any) => {
+                onClick={() =>
                   setHoveredText({
                     itemName: template.name,
                     itemDescription: template.description,
                     img: template.img2,
-                  }),
-                    getExpectedTime(template),
-                    e.stopPropagation();
-                }}
+                  })
+                }
                 key={idx}
                 className="bg-white h-max aspect-square rounded-md overflow-hidden relative group cursor-pointer"
               >
-                <Image
-                  width={512}
-                  height={512}
+                <img
                   className="filter brightness-[0.62]"
                   src={template.img}
                   alt="Website type image"
@@ -191,7 +284,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                 >
                   {dictionary.CustomerHook.toolButton}
                 </ScrollLink>
-              </ScrollLink>
+              </div>
             )
           )}
         </div>
@@ -573,9 +666,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
               </div>
               <div className="flex flex-col h-full w-1/3 ">
                 <div className="h-full w-full md:flex justify-center items-center overflow-hidden hidden">
-                  <Image
-                    width={512}
-                    height={512}
+                  <img
                     className="rounded-br-lg h-full w-max object-cover"
                     src={chosenProduct.img2}
                     alt="Chosen Website Image..."

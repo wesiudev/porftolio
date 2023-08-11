@@ -25,7 +25,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
       <div
         className={`${
           isTopVisible ? "lg:rounded-t-0" : "lg:rounded-t-[500px]"
-        } duration-500 w-full bg-gradient-to-l from-gray-600 via-gray-400 to-gray-600 min-h-screen flex flex-col relative overflow-hidden pb-12 sm:pb-12 lg:pb-24`}
+        } duration-500 w-full bg-gradient-to-l from-gray-600 via-gray-400 to-gray-600 min-h-screen flex flex-col relative overflow-hidden sm:pb-12 lg:pb-24`}
       >
         <div
           className="absolute top-48 lg:top-60 left-0 w-4 h-full"
@@ -73,7 +73,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
             />
           </div>
         </div>
-        <div className="w-4/5 lg:w-3/4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-100 relative overflow-hidden ">
+        <div className="w-full lg:w-3/4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-100 relative overflow-hidden ">
           <div className="absolute -top-24 " id="1"></div>
           {dictionary["Technologies"].map((tech: any, idx: number) => (
             <div

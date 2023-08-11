@@ -31,11 +31,9 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
                   <code className="text-7xl lg:text-8xl pb-2 text-green-400 sm:mt-6">
                     {"{"}
                   </code>
-                  <h1 className="text-6xl sm:text-7xl lg:text-8xl text-zinc-800  drop-shadow-lg shadow-black mx-auto lg:mx-0 w-max mt-3 sm:mt-0">
+                  <h1 className="text-6xl sm:text-7xl lg:text-8xl text-black mx-auto lg:mx-0 w-max mt-3 sm:mt-0">
                     <span className="pl-0 lg:pl-32 font-bold ">
-                      <span className="text-zinc-800  drop-shadow-lg shadow-black">
-                        {"/"}
-                      </span>
+                      <span className="text-black">{"/"}</span>
                       {dictionary.ProjectsPage.h1}
                     </span>
                   </h1>
@@ -84,7 +82,11 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
               <div className="bg-slate-600 p-6 text-3xl sm:text-5xl italic font-light drop-shadow-lg shadow-black flex flex-col sm:gap-6">
                 <ProjectTitle title={thumbnail.title} link={thumbnail.link} />
               </div>
-
+              <div className="w-max mx-auto lg:mx-0 text-5xl lg:text-7xl font-extralight mt-24  flex flex-row items-center">
+                <span className="text-green-500 font-bold"> {"<>"}</span>
+                {dictionary.ProjectsPage.stack}
+                <span className="text-green-500 font-bold"> {"</>"}</span>
+              </div>
               <div className="flex flex-col mt-16">
                 <div className="grid grid-cols-3  gap-3 px-6 lg:px-0">
                   {thumbnail.stack.map((stackItem: any, idx: number) => (

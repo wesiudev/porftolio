@@ -149,22 +149,16 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
         <div className="w-full grid grid-cols-2 lg:grid-cols-3 h-max gap-6">
           {dictionary.CustomerHook.templates.map(
             (template: any, idx: number) => (
-              <ScrollLink
-                to="tool"
-                smooth={true}
-                duration={500}
-                delay={200}
+              <div
                 data-aos="fade-up"
                 data-aos-delay={idx * 100}
-                onClick={(e: any) => {
+                onClick={() =>
                   setHoveredText({
                     itemName: template.name,
                     itemDescription: template.description,
                     img: template.img2,
-                  }),
-                    getExpectedTime(template),
-                    e.stopPropagation();
-                }}
+                  })
+                }
                 key={idx}
                 className="bg-white h-max aspect-square rounded-md overflow-hidden relative group cursor-pointer"
               >
@@ -191,7 +185,7 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                 >
                   {dictionary.CustomerHook.toolButton}
                 </ScrollLink>
-              </ScrollLink>
+              </div>
             )
           )}
         </div>
