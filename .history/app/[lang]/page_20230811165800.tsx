@@ -63,7 +63,7 @@ export default async function IndexPage({
         <Technologies dictionary={dictionary} />
       </div>
 
-      {/* <CustomerHook dictionary={dictionary} /> */}
+      <CustomerHook dictionary={dictionary} />
     </>
   );
 }

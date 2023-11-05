@@ -462,11 +462,6 @@ export default function CustomerHook({ dictionary }: { dictionary: any }) {
                   }`}
                 >
                   <h1 className="text-xl">
-                    <span className="text-green-500 flex flex-row items-center mb-3 lg:mb-6">
-                      {" "}
-                      <FaFire className="text-red-500 h-6 w-6 mr-2" /> Aktualnie
-                      nie pracuję nad żadnym projektem
-                    </span>
                     Wypełnij formularz, a ja skontaktuję się z Tobą w celu
                     ustalenia szczegółów.
                   </h1>
