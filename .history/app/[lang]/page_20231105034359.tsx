@@ -1,12 +1,13 @@
 import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
 import { HomeTitle } from "../components/HomeTitle";
-
+import Head from "../components/headers/head";
 import Header from "../components/headers/header";
 import Technologies from "../components/technologies";
 import TextSwitcher from "../components/TextSwitcher";
 import ProjectsPage from "../components/projects";
-
+import About from "../components/about";
+import CustomerHook from "../components/offer";
 import FurtherHeader from "../components/headers/furtherHeader";
 
 export default async function IndexPage({
@@ -17,13 +18,35 @@ export default async function IndexPage({
   const dictionary = await getDictionary(lang);
 
   return (
+    // <div className="bg-red-500">
+    //   <LocaleSwitcher />
+    //   <p>Current locale: {lang}</p>
+    //   <p>
+    //     This text is rendered on the server:{" "}
+    //     {dictionary["server-component"].welcome}
+    //   </p>
+    //   <Counter dictionary={dictionary.counter} />
+    // </div>
+
+    // <div className="bg-red-500">
+    //   <LocaleSwitcher />
+    //   <p>Current locale: {lang}</p>
+    //   <p>
+    //     This text is rendered on the server:{" "}
+    //     {dictionary["server-component"].welcome}
+    //   </p>
+    //   <Counter dictionary={dictionary.counter} />
+    // </div>
     <>
       <FurtherHeader
         location="technologies"
         lang={lang}
         dictionary={dictionary}
       />
-
+      <Head
+        title={dictionary.MetaData["IndexTitle"]}
+        description={dictionary.MetaData["IndexDescription"]}
+      />
       <main className="h-full flex flex-col justify-between relative w-full px-3 lg:px-0 lg:w-3/4 mx-auto min-h-screen bg-red-500">
         <Header dictionary={dictionary} lang={lang} />
 

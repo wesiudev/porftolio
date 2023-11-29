@@ -27,8 +27,8 @@ export default async function Root({
     <html className="scrollbarBlack" lang={params.lang}>
       <body className={`${cocosharp.variable} font-sans scrollbarBlack`}>
         <Head
-          title="Portfolio Front-End Developera | Blog o Technologiach | wesiu.dev"
-          description="Odwiedź moje portfolio Front-End Developera oraz przeczytaj interesujące artykuły na temat najnowszych technologii na moim blogu. Poznaj moje projekty i doświadczenie w programowaniu stron internetowych."
+          title="Front-end Developer Portfolio | Blog - Technologie | wesiu.dev"
+          description=""
         />
         <Providers>{children}</Providers>
       </body>
