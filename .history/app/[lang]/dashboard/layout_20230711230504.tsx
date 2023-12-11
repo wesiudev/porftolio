@@ -1,5 +1,6 @@
 import { getDictionary } from "../../../get-dictionary";
 import { Locale } from "../../../i18n-config";
+import { Providers } from "../../../redux/Provider";
 import Head from "../../components/headers/head";
 
 export default async function DashboardLayout({

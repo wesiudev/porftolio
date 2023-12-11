@@ -18,8 +18,9 @@ export default function UserDetails() {
   }
   useEffect(() => {
     !loading && getUser(user?.email).then((res) => setUserData(res[0]));
+    console.log(userData);
   }, [loading]);
-  !user && !loading && redirect("/clients");
+  !auth.currentUser && !loading && redirect("/clients");
   //animations
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (

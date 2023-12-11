@@ -18,6 +18,7 @@ export default function UserDetails() {
   }
   useEffect(() => {
     !loading && getUser(user?.email).then((res) => setUserData(res[0]));
+    console.log(userData);
   }, [loading]);
   !user && !loading && redirect("/clients");
   //animations
