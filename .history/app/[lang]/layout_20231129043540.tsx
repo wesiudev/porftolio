@@ -1,6 +1,7 @@
 import { Locale, i18n } from "../../i18n-config";
 import "../../app/styles/globals.css";
 import localFont from "next/font/local";
+import { Providers } from "../../redux/Provider";
 import FurtherHeader from "../components/headers/furtherHeader";
 import { getDictionary } from "../../get-dictionary";
 import Head from "../components/headers/head";
@@ -29,7 +30,7 @@ export default async function Root({
           title="Portfolio Front-End Developera | Blog o Technologiach | wesiu.dev"
           description="Odwiedź moje portfolio Front-End Developera oraz przeczytaj interesujące artykuły na temat najnowszych technologii na moim blogu. Poznaj moje projekty i doświadczenie w programowaniu stron internetowych."
         />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,6 +1,13 @@
 "use client";
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  signInWithRedirect,
+  getRedirectResult,
+  signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { provider, auth } from "../../../firebase/index";
 import { FaEnvelope, FaKey } from "react-icons/fa";
 import { redirect } from "next/navigation";
