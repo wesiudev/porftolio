@@ -35,7 +35,7 @@ export default async function IndexPage({
         <div className="fixed left-0 top-0 bg-gradient-to-br from-gray-500 via-gray-300 to-gray-500 background-animate delay-1000 h-full w-full"></div>
         <HomeTitle />
       </main>
-      {/* <About dictionary={dictionary} /> */}
+      <About dictionary={dictionary} />
       <ProjectsPage dictionary={dictionary} />
       <div className="mt-12">
         <Technologies dictionary={dictionary} />

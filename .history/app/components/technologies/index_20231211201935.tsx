@@ -18,6 +18,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
   }, []);
   return (
     <>
+      
       <div
         className={`${
           isTopVisible ? "lg:rounded-t-0" : "lg:rounded-t-[500px]"
@@ -32,14 +33,14 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
             <h1
               data-aos="fade-down"
               data-aos-delay="300"
-              className="hidden lg:block text-center lg:text-left w-full px-3 pb-6 sm:px-0 mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold"
+              className="hidden lg:block text-center lg:text-left w-full px-3 pb-6 sm:px-0 sm:w-3/4 mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold"
             >
               <span className="text-green-400">{"/*"}</span>
               {dictionary["TechnologiesPage"].h1}
               <span className="text-green-400">{"*/"}</span>
             </h1>
             <div className="h-[30vh] w-full overflow-hidden flex items-center justify-center lg:hidden mb-6 relative">
-              <h1 className="absolute left-[50%] bg-black h-full bg-opacity-30 lg:bg-transparent -translate-x-[50%] top-[50%] -translate-y-[50%] text-center lg:text-left w-full flex items-center justify-center  mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold">
+              <h1 className="absolute left-[50%] bg-black h-full bg-opacity-30 lg:bg-transparent -translate-x-[50%] top-[50%] -translate-y-[50%] text-center lg:text-left w-full flex items-center justify-center sm:w-3/4 mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold">
                 <span className="text-green-400">{"/"}</span>
                 {dictionary["TechnologiesPage"].h1}
               </h1>

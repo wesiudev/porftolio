@@ -12,17 +12,18 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
   const isVisible = useIsVisible(nodeRef);
   return (
     <>
+      
       <div
-        className={`w-full h-max  flex items-center relative overflow-hidden`}
+        className={`w-full h-max lg:min-h-screen  flex items-center relative overflow-hidden`}
       >
         <Animate>
-          <section className="w-full mx-auto px-3 lg:px-0 lg:w-3/4 relative overflow-hidden">
+          <section className="w-full mx-auto px-3 lg:px-0 lg:w-3/4 h-full relative overflow-hidden">
             <div
               className="absolute top-24 sm:top-40 lg:top-60 left-0 w-4 h-full"
               ref={nodeRef}
             />
             <div className="flex flex-col w-full sm:w-4/5 mx-auto">
-              <div className="flex flex-col h-max py-12 justify-center relative select-none">
+              <div className="flex flex-col h-max py-12 lg:h-screen justify-center relative select-none">
                 <div className="h-max flex flex-col justify-center rounded-md">
                   <code className="text-7xl lg:text-8xl pb-2 text-green-400 sm:mt-6">
                     {"{"}
@@ -36,7 +37,7 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
                     </span>
                   </h1>
                   <div className="relative flex flex-col text-lg text-center lg:text-left sm:text-2xl w-full italic font-extralight pt-6 text-black drop-shadow-lg shadow-black">
-                    <span className="pl-0 lg:pl-32 mt-6 lg:w-full mx-auto ">
+                    <span className="pl-0 lg:pl-32 mt-6 w-3/4 lg:w-full mx-auto ">
                       {dictionary.ProjectsPage.h2}
                     </span>
 

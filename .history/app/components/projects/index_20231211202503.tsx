@@ -28,7 +28,7 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
                     {"{"}
                   </code>
                   <h1 className="text-6xl sm:text-7xl lg:text-8xl text-zinc-800  drop-shadow-lg shadow-black mx-auto lg:mx-0 w-max mt-3 sm:mt-0">
-                    <span className="pl-0 lg:pl-32 font-bold ">
+                    <span className="pl-0 font-bold ">
                       <span className="text-zinc-800  drop-shadow-lg shadow-black">
                         {"/"}
                       </span>

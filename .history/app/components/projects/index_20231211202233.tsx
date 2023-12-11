@@ -36,7 +36,7 @@ export default function ProjectsPage({ dictionary }: { dictionary: any }) {
                     </span>
                   </h1>
                   <div className="relative flex flex-col text-lg text-center lg:text-left sm:text-2xl w-full italic font-extralight pt-6 text-black drop-shadow-lg shadow-black">
-                    <span className="pl-0 lg:pl-32 mt-6 lg:w-full mx-auto ">
+                    <span className="pl-0 lg:pl-32 mt-6 w-3/4 lg:w-full mx-auto ">
                       {dictionary.ProjectsPage.h2}
                     </span>
 

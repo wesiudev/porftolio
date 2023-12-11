@@ -39,7 +39,7 @@ export default function Technologies({ dictionary }: { dictionary: any }) {
               <span className="text-green-400">{"*/"}</span>
             </h1>
             <div className="h-[30vh] w-full overflow-hidden flex items-center justify-center lg:hidden mb-6 relative">
-              <h1 className="absolute left-[50%] bg-black h-full bg-opacity-30 lg:bg-transparent -translate-x-[50%] top-[50%] -translate-y-[50%] text-center lg:text-left w-full flex items-center justify-center  mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold">
+              <h1 className="absolute left-[50%] bg-black h-full bg-opacity-30 lg:bg-transparent -translate-x-[50%] top-[50%] -translate-y-[50%] text-center lg:text-left w-full flex items-center justify-center sm:w-3/4 mx-auto lg:mx-0 text-5xl sm:text-6xl xl:text-7xl drop-shadow-lg shadow-black text-white font-bold">
                 <span className="text-green-400">{"/"}</span>
                 {dictionary["TechnologiesPage"].h1}
               </h1>

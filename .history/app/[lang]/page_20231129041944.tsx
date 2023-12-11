@@ -8,7 +8,6 @@ import TextSwitcher from "../components/TextSwitcher";
 import ProjectsPage from "../components/projects";
 
 import FurtherHeader from "../components/headers/furtherHeader";
-import About from "../components/about";
 
 export default async function IndexPage({
   params: { lang },
