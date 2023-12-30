@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 .linear-gradient {
-  background: linear-gradient(-45deg, #4be483, rgb(75, 107, 211), #e8a057, #af5cea);
-	background-size: 400% 400%;
-	animation: linearGradient 15s ease infinite;
+  background: linear-gradient(
+    -45deg,
+    #4be483,
+    rgb(75, 107, 211),
+    #e8a057,
+    #af5cea
+  );
+  background-size: 400% 400%;
+  animation: linearGradient 15s ease infinite;
 }
 .text-rotator {
   transition: transform 0.5s ease;
@@ -18,50 +24,45 @@
   height: 20px;
 }
 
-
 .scrollbarBlack::-webkit-scrollbar-thumb {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: linearGradient 15s ease infinite;
+  background-size: 400% 400%;
+  animation: linearGradient 15s ease infinite;
 }
 
 .scrollbarBlack::-webkit-scrollbar-thumb:hover {
   background: #ae5ef8;
 }
 .background-animate {
-    background-size: 400%;
-    -webkit-animation: AnimationStart 3s ease 1;
-    -moz-animation: AnimationStart 3s ease 1;
-    animation: AnimationStart 3s ease 1;
-    animation-delay: 1000ms;
-    opacity:0.85;
-  }
-  .background-position{
-    background-size: 400%;
+  background-size: 400%;
+  -webkit-animation: AnimationStart 3s ease 1;
+  -moz-animation: AnimationStart 3s ease 1;
+  animation: AnimationStart 3s ease 1;
+  animation-delay: 1000ms;
+  opacity: 0.85;
+}
+.background-position {
+  background-size: 400%;
+  background-position: 0% 50%;
+}
+@keyframes AnimationStart {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
-  @keyframes AnimationStart {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
   }
-
-  .background-image{
-    background-image: url("./header.jpg");
-    background-size: cover;
-  }
+}
 
 .background-animate-projects {
-    background-size: 400%;
-    -webkit-animation: AnimationStartProjects 1s ease-in 1;
-    -moz-animation: AnimationStartProjects 1s ease-in 1;
-    animation: AnimationStartProjects 1s ease-in 1;
-    animation-delay: 1000ms;
-  }
+  background-size: 400%;
+  -webkit-animation: AnimationStartProjects 1s ease-in 1;
+  -moz-animation: AnimationStartProjects 1s ease-in 1;
+  animation: AnimationStartProjects 1s ease-in 1;
+  animation-delay: 1000ms;
+  background-color: #a855f7;
+}
 /* google auth */
 .google-button {
   display: flex;
@@ -100,22 +101,22 @@
   }
 }
 @keyframes AnimationStartProjects {
-    0% {
-      background-position: 100%;
-    }
-    100% {
-      background-position: 0%;
-    }
+  0% {
+    background-position: 100%;
   }
+  100% {
+    background-position: 0%;
+  }
+}
 
-  @keyframes linearGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+@keyframes linearGradient {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

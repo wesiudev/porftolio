@@ -46,7 +46,7 @@ export const HomeTitle = () => {
               : "text-transparent scale-150"
           } w-max font-extralight italic drop-shadow-lg shadow-black`}
         >
-          web
+          front-end
         </code>
         <code
           className={`${
@@ -55,7 +55,7 @@ export const HomeTitle = () => {
               : "text-transparent scale-150"
           } w-max font-extralight italic drop-shadow-lg shadow-black`}
         >
-          dev
+          developer
         </code>{" "}
       </div>
     </div>

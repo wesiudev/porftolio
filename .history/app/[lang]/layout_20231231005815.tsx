@@ -1,17 +1,21 @@
 import { Locale, i18n } from "../../i18n-config";
 import "../../app/styles/globals.css";
 import localFont from "next/font/local";
-import FurtherHeader from "../components/headers/furtherHeader";
 import { getDictionary } from "../../get-dictionary";
-import Head from "../components/headers/head";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
-export const metadata = {
-  icons: {
-    icon: "/favicon.png",
-  },
+export const metadata: Metadata = {
+  icons: [
+    {
+      url: "/favicon.ico",
+      sizes: "32x32",
+      type: "image/x-icon",
+    },
+  ],
+
   viewport: "width=device-width, initial-scale=1",
 };
 export default async function Root({
@@ -25,10 +29,6 @@ export default async function Root({
   return (
     <html className="scrollbarBlack" lang={params.lang}>
       <body className={`${cocosharp.variable} font-sans scrollbarBlack`}>
-        <Head
-          title="Portfolio Front-End Developera | Blog o Technologiach | wesiu.dev"
-          description="Odwiedź moje portfolio Front-End Developera oraz przeczytaj interesujące artykuły na temat najnowszych technologii na moim blogu. Poznaj moje projekty i doświadczenie w programowaniu stron internetowych."
-        />
         {children}
       </body>
     </html>
